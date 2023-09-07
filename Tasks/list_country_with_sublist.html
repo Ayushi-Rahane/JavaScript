@@ -1,0 +1,48 @@
+<html>
+    <body onload="document.getElementById('sel2').style.visibility='hidden'; 
+    document.getElementById('t1').style.visibility='hidden';
+    document.getElementById('t2').style.visibility='hidden';">
+     <select onchange="action();"  id="sel1">
+        <option>India </option>
+        <option>Russia </option>
+        <option>China </option>
+        <option>America </option>
+     </select>
+
+     <select  onchange="action2();" id="sel2">
+        <option>Select an option: </option>
+        <option>State: </option>
+        <option>Population: </option>
+     </select>
+     <input type="text" id="t1" placeholder="State" onchange="settxt();">
+     <input type="text" id="t2" placeholder="Population">
+
+     <p id="p1"></p>
+    </body>
+    <script>
+        var country, state, ppl;
+        
+        function action() {
+            country = document.getElementById("sel1").value;
+            document.getElementById('sel2').style.visibility = 'visible';
+        }
+
+        function action2() {
+            var sel2 = document.getElementById("sel2").value;
+
+            if (sel2 === "State:") {
+                state = document.getElementById('t1').value;
+                document.getElementById('t1').style.visibility = 'visible';
+                document.getElementById('t2').style.visibility = 'hidden';
+            } else if (sel2 === "Population:") {
+                ppl = document.getElementById('t2').value;
+                document.getElementById('t2').style.visibility = 'visible';
+                document.getElementById('t1').style.visibility = 'hidden';
+            }
+        }
+
+        function settxt() {
+            document.getElementById("p1").innerHTML = "Country: " + country + "<br> State: " + state + "<br> Population: " + ppl;
+        }
+    </script>
+</html>
