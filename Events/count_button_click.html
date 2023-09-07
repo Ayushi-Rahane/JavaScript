@@ -1,0 +1,14 @@
+<html>
+    <body>
+       <input type="button" value="click" id="btn" onclick="click2();">
+        <p id="para"></p>
+    </body>
+    <script>
+        var count=0;
+        function click2(){
+            
+           
+            document.getElementById("para").innerHTML = "Total number of times the button is clicked: "+(++count);
+        }
+    </script>
+</html>

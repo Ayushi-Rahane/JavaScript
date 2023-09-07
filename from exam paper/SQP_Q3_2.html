@@ -1,0 +1,16 @@
+<!-- Write a JavaScript function to count the number of vowels in a given string.-->
+<html>
+    <body>
+        <script>
+            var str = prompt("Enter the String: ");
+            var count=0;
+            var str2 = str.split('');
+            for (s in str2){
+                if(str2[s]=='a' || str2[s]=='e' || str2[s]=='i'||str2[s]=='o'||str2[s]=='u'||str2[s]=='A'||str2[s]=='E'||str2[s]=='I'||str2[s]=='O'||str2[s]=='U'){
+                    count++
+                }
+            }
+            document.write("The number of vowels in "+str+" String is: "+count);
+        </script>
+    </body>
+</html>

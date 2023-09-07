@@ -1,0 +1,19 @@
+<html>
+    <body id="b">
+        
+        <script>
+            var i=0, a=["red","green","yellow","blue","pink"];
+      function chgclr(){
+      
+        document.body.style.backgroundColor = a[i];
+        i++;
+        if(i==a.length){
+            i=0;
+        }
+        setTimeout(chgclr,2000);
+      }
+      setTimeout(chgclr,2000);
+        </script>
+    </body>
+ 
+</html>

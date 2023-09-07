@@ -1,0 +1,37 @@
+<html>
+    <body onload="document.getElementById('sel').style.visibility='hidden';">
+     <label>Enter the color: </label>
+     <input type="text" id="t" >
+     <br>
+     <br>
+     <button onclick="add_color();">Add color</button>
+     <select id="sel" onchange="action();">
+      
+     </select>
+     <p id="p1"></p>
+    </body>
+    <script>
+      function add_color(){
+        document.getElementById("sel").style.visibility="visible";
+        var color = document.getElementById("t");
+        var para = document.getElementById("p1");
+        if(color.value=="") {
+            para.innerHTML="Kindly enter the color ";
+        }
+        else{
+        var op = new Option(color.value,color.value);
+        var opColor = document.getElementById("sel");
+        opColor.add(op,undefined);
+        color.value="";
+        para.innerHTML="";
+
+        }
+
+      }
+      function action(){
+        var color = document.getElementById("sel");
+        document.body.style.backgroundColor=color.value;
+      }
+
+    </script>
+</html>

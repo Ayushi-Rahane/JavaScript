@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <form>
+            <center><fieldset style="background-color:lightpink"><center><legend><h1>Registration Form</h1></legend></center> 
+                <label>
+                    Enter the First name: 
+                </label>
+                <input type="text"> 
+                <br>
+                <br>
+                <label>Enter the Last name: </label>
+                <input type="text">
+                <br>
+                <br>
+                <!--RadioButton-->
+                <label>Select interested Subjects: </label><br>
+                <!--If two or more radiobuttons have same id then the user can select multiple radiobutton at a time. it is used for multiple choices-->
+                <input type="radio" id="sub"> CSS <br>
+                <input type="radio" id="sub"> OSY <br>
+                <input type="radio" id="sub"> EST <br>
+                <input type="radio" id="sub"> AJP <br>
+                
+                <label>Select Year:</label><br>
+                <!--here two or more radiobutton have same name then the user can select only one radio button at a time.It is used to select single choice-->
+                <input type="radio"  name="year" > FYCM<br>
+                <input type="radio" name="year"> SYCM <br>
+                <input type="radio" name="year" checked> TYCM <br>
+
+                <!--Drop-down menu / List-->
+                Select Year : <select id="yr"  size="2">
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25" >2025</option>
+                    <option value="26" >2026</option>
+                    <option value="27" >2027</option>
+                    <option value="28" >2028</option>
+                </select>
+                <br>
+                <br>
+              <label >Select Gender:<br><input type="radio" value="m" name="gen">Male <input type="radio" value="f" name="gen">Female <input type="radio" value="pns" name="gen"> Prefer not to say</label>
+              <br>
+              <label>Check interested fields:  <br><input type="checkbox" value="tech" id="club">Technology<input type="checkbox" value="ML" id="club">Machine Learning <input type="checkbox" value="AI" id="club">Artificial Intelligence</label>
+              <br>
+              <br>
+              <label>
+                Enter your suggestions
+              </label><br>
+              <textarea cols="12" rows="5"></textarea>
+              <br>
+              <br>
+              <!--A submit button sends data-->
+              <input type="submit" value="Submit" style="background-color: green; border:none;">
+              <!--A reset button restores all form element to their initial state-->
+              <input type="reset" value="Reset" style="background-color: red; border:none;">
+            </fieldset>
+        </center>
+        </form>
+    </body>
+</html>

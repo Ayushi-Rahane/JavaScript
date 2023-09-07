@@ -1,0 +1,26 @@
+
+<!--print the entered key and text on paragraph using onkeyup event --><html>
+    <body>
+        <label>Enter Input: </label>
+        <input type="text" id="in" onkeyup="up(event);" onkeypress = "printt();" onkeydown="down(event);">
+        <p id="p1"></p>
+        <p id="p2"></p>
+    </body>
+    <script>
+        function up(e){
+            document.getElementById("p1").innerHTML = "Entered key: "+e.key;
+            document.getElementById("p2").innerHTML = "Entered Text:" +document.getElementById("in").value;
+            alert("You pressed a key inside textfield - UP");
+        }
+        function down(e){
+            alert("You pressed a key inside textfield - DOWN");
+        }
+
+        function printt(){
+            console.log(document.getElementById("in").value);
+            alert("You pressed a key inside textfield");
+
+        }
+            
+    </script>
+</html>

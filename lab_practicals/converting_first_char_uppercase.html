@@ -1,0 +1,21 @@
+<!--Converting first charcter of each word in the give sentence-->
+<html>
+    <body>
+        <script>
+            var a = "welcome to k b p polytechnic kopargaon";
+            document.write(a+"<br>");
+            b= a.split("");
+            for(let i = 0 ;i<b.length;i++)
+            {
+                if(i==0){
+                    b[i]=b[i].toUpperCase();
+                }
+            if(b[i]==' '){
+                b[i+1]=b[i+1].toUpperCase();  
+            }
+        }
+        a = b.join("");
+        document.write(a)
+        </script>
+    </body>
+</html>

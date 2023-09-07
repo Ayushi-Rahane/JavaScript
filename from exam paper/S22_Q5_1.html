@@ -1,0 +1,19 @@
+<!--Write a javascript to checks whether a passed string is palindrome or not. -->
+<html>
+    <body>
+        <script>
+           function palindrome(str){
+              
+               if(str == str.split('').reverse().join("")){
+                document.write(str," is Palindrome String");
+               }
+               else{
+                document.write(str," is not Palindrome String");
+               }
+           }
+
+           str = prompt("enter the String to check whether it is Palindrome or not: ");
+           palindrome(str);
+        </script>
+    </body>
+</html>

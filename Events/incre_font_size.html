@@ -1,0 +1,22 @@
+<html>
+    <body>
+      <input value="increase" type="button" onclick="incre();">
+      <button onclick="decre();">Decrease</button>
+      <p id="p1">Sanjivani</p>
+    </body>
+
+    <script>
+     var fs = parseInt(getComputedStyle(document.getElementById("p1")).fontSize);
+   
+     function incre(){
+       
+        document.getElementById("p1").style.fontSize = ( fs += 2)+"px"; 
+        console.log(fs)
+     }
+     function decre(){
+        fs -= 2;
+        document.getElementById("p1").style.fontSize = fs+"px" 
+     }
+    
+    </script>
+</html>

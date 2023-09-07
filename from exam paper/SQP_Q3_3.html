@@ -1,0 +1,28 @@
+<!--Write a JavaScript that find and displays number of duplicate values in an array.
+-->
+
+<html>
+    <body>
+        <script>
+            var arr = new Array(12,32,43,12,46,21,345,32,4,21,34,5,64,21,12)
+            var count=0,flag=0;
+            for(let i=0;i<arr.length;i++ ){
+                for(j=0;j<arr.length;j++){
+                    if(j!=i){
+                        if(arr[i]==arr[j]){
+                            count++;      
+                           
+                        }
+                        
+                    }
+                    
+                }
+                /*
+                document.write("<br>number of duplicate value of "+arr[i]+" is "+count)
+                    count=0;
+                   */
+            }
+            document.write("<br>number of duplicate value of in an array is:  "+count)
+        </script>
+    </body>
+</html>

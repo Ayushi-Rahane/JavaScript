@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <button onclick="action();" ondblclick="daction();"   id="btn">Click</button>
+      
+        <p  id="p1"></p>
+        <p id="p2"></p>
+    </body>
+    <script>
+        var count=0,count2=0;
+        function action(){
+            document.getElementById("p1").innerHTML = "Total number of time the button is clicked: "+(++count);
+        }
+
+        function daction(){
+            document.getElementById("p2").innerHTML = "Total number of time the button is doubled clicked: "+(++count2);
+        }
+    </script>
+</html>

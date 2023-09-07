@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+          var num1=121;
+          var temp=num1;
+          var r,num2="",r1;
+          for(;num1>0;){
+            r=num1%10;
+            r1=String(r);
+            num2=num2+r1;
+            num1=parseInt(num1/10);
+
+          }
+
+          if(temp==Number(num2)){
+            document.write(temp+" is Palindrome number");
+          }
+          else{
+            document.write(temp+" is not Palindrome number");
+          } 
+          
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Palindrome number</title>
+    </head>
+    <body>
+        <script>
+            var num = parseInt(prompt("Enter the number to check whether it is palindrome or not: "));
+            var num2="",ref=num;
+            for(;;){
+                num2+=String(num%10);
+                if((num=parseInt(num/10))===0){
+                    break;
+                }
+                
+            }
+            if(ref===Number(num2)){
+                document.write(ref+" is Palindrome");
+            }
+            else{
+                document.write(ref+" is not Palindrome");
+            }
+        </script>
+    </body>
+</html>

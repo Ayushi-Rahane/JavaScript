@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <script>
+            var a = new Array(1,2,3,2,5,2,7,2,9);
+            console.log(a.pop()); //Remove the last element of array
+            console.log(a);
+            console.log(a.push(3)); //Add element at the end of array
+            console.log(a);
+            console.log(a.shift()); //Remove the first element of array
+            console.log(a);
+            console.log(a.unshift(2)); //At new element at the start of array and returns the length of an array
+            console.log(a);
+            
+            //-----INDEXING------//
+            console.log(a.indexOf(3)); //It returns the index position of given first occurance element
+            console.log(a.indexOf(2,6));//It starts to search element from given index number and if found then it returns it's index number otherwise it return -1.
+            console.log(a.lastIndexOf(2)); //It returns the index number of give last occurance number.
+
+            //------Slicing-----//
+
+            console.log(a.slice(3));//It returns elements from given index no.
+            console.log(a.slice(3,6)) //It return elements from start index till the end index
+
+            //----Other Methods----//
+             var a1 = [2,3,4,5];
+             var a2 = [3,4,6,7];
+             console.log(a1+a2); //It concat 2 array in form of String
+             console.log(a1.concat(a2));
+             console.log(a1.join("")); //This method join the array with separator or without separator
+             console.log(a1.toString()); //It return the array in form of String
+             
+
+             
+             
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

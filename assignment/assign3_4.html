@@ -1,0 +1,21 @@
+
+<html>
+    <body>
+   <label>
+    Enter the class: 
+   </label>
+   <input type="checkbox" name="fy" onchange="action(this);" value="FYCM">
+   <input type="checkbox" name="sy" onchange="action(this);" value="SYCM">
+   <input type="checkbox" name="ty" oncheck="action(this);" value="TYCM">
+   <p id="p1"></p>
+    </body>
+    <script>
+function action(obj){
+     
+            document.getElementById("p1").innerHTML="You have selected "+obj.value;
+        
+    
+}
+
+    </script>
+</html>

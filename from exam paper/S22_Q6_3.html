@@ -1,0 +1,18 @@
+<!--Write a javascript function to generate Fibonacci series till user defined limit. -->
+
+<html>
+    <body>
+        <script>
+            var limit = parseInt(prompt("Enter the limit  to genearte the fibonacci series: "));
+            var a=0,b=1,c;
+            document.write("<br>Fibonacci Series: <br> "+a+"<br>"+b+"<br>");
+            for(let i=0;i<limit-2;i++){
+                c=a+b;
+                document.write(c+"<br>")
+                a=b;
+                b=c;
+            }
+
+        </script>
+    </body>
+</html>

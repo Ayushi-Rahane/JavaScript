@@ -1,0 +1,46 @@
+<html>
+    <body onload="document.getElementById('sel').style.visibility='hidden'">
+      <label>Enter the image to add:</label>
+      <input type="text" id="t">
+      <br> <br>
+      <button onclick="add_img();">Insert image</button>
+      <br>
+      <br>
+      <select id="sel" onchange="insert_img();">
+
+      </select>
+       <p id="p1"></p>
+    </body>
+    <script>
+        function add_img(){
+            var img = document.getElementById("t").value;
+            var img_op = new Option(img,img);
+            var sel_op=document.getElementById("sel");
+            sel_op.add(img_op,undefined);
+            document.getElementById('sel').style.visibility='visible'
+        }
+
+    function insert_img(){
+        var img = document.getElementById("sel");
+        var a = ["car.jpg","flower.jpg","dog.jpg","cat.jpg"];
+        var img_add;
+        for(let i=0;i<a.length;i++){
+         img_add = a[i].slice(0,-4);
+         console.log(img_add);
+         console.log(img);
+        if(img_add==img.value.toLowerCase()){
+            console.log(img_add);
+            document.body.style.backgroundImage="url("+"'"+a[i]+"'"+")";
+            document.getElementById("p1").innerHTML="";
+            break;
+        }
+        else{ 
+            document.body.style.backgroundImage=null;
+                 document.getElementById("p1").innerHTML="Image not found! Try to search for another"
+                
+        }
+    }
+        
+    }
+    </script>
+</html> 

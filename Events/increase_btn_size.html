@@ -1,0 +1,20 @@
+<html>
+    <body>
+       <button id="btn1" onmousemove="incre();" onmouseout="decre();"><img src="download.jpg" style="mix-blend-mode:color-burn;" ></button>
+       
+    </body>
+    <script>
+   function incre(){
+    var btn = document.getElementById("btn1")
+    btn.style.width=500 + "px";
+    btn.style.height=500 + "px";
+    btn.style.backgroundColor = "lightpink";
+   }
+   function decre(){
+    var btn = document.getElementById("btn1")
+    btn.style.width=307 + "px";
+    btn.style.height=164 + "px";
+    btn.style.backgroundColor = "lightblue";
+   }
+    </script>
+</html>

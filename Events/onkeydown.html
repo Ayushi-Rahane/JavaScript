@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <label>Enter Input: </label>
+        <input type="text" id="in" onkeydown="down(event);">
+        <p id="p1"></p> 
+        <p id="p2"></p>
+    </body>
+
+    <script>
+        function down(e){
+            document.getElementById("p1").innerHTML= "Entered key: "+e.key;
+            document.getElementById("p2").innerHTML = "Entered Text: "+document.getElementById("in").value;
+        }
+    </script>
+</html>

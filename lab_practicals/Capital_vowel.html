@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            function capital_vowel(str){
+                var a= str.split("");
+                for(let i=0;i<a.length;i++){
+                   /*if(a[i] =='a' ||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u' || a[i] =='A' ||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')*/
+                  /* if(/[aeiou]/i.test(a[i]))*/
+               {
+                       a[i]= a[i].toUpperCase();
+                }
+                else{
+                    a[i] = a[i].toLowerCase();
+                }
+                
+                }
+                return a.join("");
+            }
+            var string = prompt("Enter the string: ") 
+            
+            document.write("Original String: "+string+" <br> Updated String: "+capital_vowel(string));
+        </script>
+    </body>
+</html>   
+
+<!--
+<html><body><script>function capital_vowel(str){var a = str.split("");for(let i=0;i<a.length;i++){/[aeiou]/i.test(a[i]) ? a[i]=a[i].toUpperCase():a[i]=a[i].toLowerCase()}return a.join("");}var string = prompt("Enter the String:");document.write("Original String: "+string+"<br> Updated String: "+capital_vowel(string));</script></body></html>
+-->

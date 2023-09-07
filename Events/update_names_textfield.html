@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <label>Enter First name: </label>
+        <input type="text" id="fn" onChange="action();">
+        <br>
+        <br>
+        <label>Enter Middle name: </label>
+        <input type="text" id="mn" onChange="action();">
+        <br>
+        <br>
+        <label>Enter Last name: </label>
+        <input type="text" id="ln" onChange="action();">
+    
+    </body>
+    <script>
+
+        function action(){
+            var a = ["fn","mn","ln"];
+
+            for(let i=0;i<a.length;i++){
+          var name = document.getElementById(a[i]).value;
+          name = name.charAt(0).toUpperCase() + name.slice(1,name.length);
+          document.getElementById(a[i]).value = name;
+            }
+        }
+
+
+    </script>
+</html>

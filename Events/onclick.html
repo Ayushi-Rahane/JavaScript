@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <label>Enter first name: </label>
+        <input type="text" id="fname">
+        <label>Enter last name: </label>
+        <input type="text" id="lname">
+        <p id="para"></p>
+        <input type="button" onclick="action()">
+    </body>
+    <script>
+        function action(){
+            var fname = document.getElementById("fname");
+            var lname = document.getElementById("lname");
+            var p =document.getElementById("para");
+            p.innerHTML=fname.value + " "+ lname.value;
+           
+            
+
+
+        }
+    </script>
+</html>

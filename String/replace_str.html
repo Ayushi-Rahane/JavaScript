@@ -1,0 +1,27 @@
+<!--Write a JavaScript that will replace the specified string value with another value in string
+Example: String = "Welcome to Sanjivani College"
+Replace "college" with "institute"-->
+<html>
+    <body>
+      
+    </body>
+    <script>
+        var str1 = "Welcome to Sanjivani College";
+  function Replace(){
+      var arr = str1.split(" ");
+      console.log(arr)
+
+      for(let i=0;i<arr.length;i++){
+        if(arr[i] == "College"){
+            arr[i]="Institute";
+     
+        }
+      }
+      return arr.join(" ");
+    }
+      
+    document.write("Original String: "+str1+"<br>");
+    document.write("Updated String: "+Replace());  
+ 
+    </script>
+</html>

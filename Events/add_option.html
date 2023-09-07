@@ -1,0 +1,34 @@
+<!--Design a webpage which contains label = "Enter option: ", textfield, button, empty option list. Write JS to implement onclick eveent handler which will add the option entered by the user into option list-->
+
+<html>
+    <body>
+    <label>Enter the option: </label>
+    <input type="text" id="t">
+    <button onclick="action();">Add</button>
+    <br>
+    <br>
+    <select id="opid">
+     
+    </select>
+    <p id="p1"></p>
+    </body>
+
+    <script>
+  function action(){
+
+  
+   
+var op = document.getElementById("t");
+if(op.value==""){
+document.getElementById("p1").innerHTML="*-**-*-*--Enter option-*-*-*-*-*-*-"
+}
+else{
+    var newop = new Option(op.value,op.value);
+
+    document.getElementById("opid").add(newop,undefined);
+    op.value ="";
+    document.getElementById("p1").innerHTML=""
+  }
+}
+    </script>
+</html>

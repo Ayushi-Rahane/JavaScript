@@ -1,0 +1,18 @@
+<!--Accept the text from user and display it after user press Shift key-->
+<html>
+    <body>
+    <label>Enter input: </label>
+    <input type="text" id="in" onkeyup="action(event)">
+    <p id="p1"></p>
+    <p id="p2">[Enter shift to display text]</p>
+    <br>
+    </body>
+    <script>
+     function action(e){
+        
+        if(e.key === "Shift"){
+            document.getElementById("p1").innerHTML = "Entered text: "+ document.getElementById("in").value;
+        }
+     }
+    </script>
+</html>

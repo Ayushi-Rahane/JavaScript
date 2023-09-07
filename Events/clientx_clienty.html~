@@ -1,0 +1,14 @@
+<html>
+    <body id="b" onmouseover="coordinate(event);" onmouseout="coordinate(event);"
+    onmouseup="coordinate(event);"
+    onmousedown="coordinate(event);
+    "onclick="coordinate(event);">
+<p id="para"></p>
+    </body>
+    <script>
+  function coordinate(event){
+    document.getElementById("para").innerHTML= "X: "+event.clientX+" "+"Y: "+event.clientY;
+
+  }
+    </script>
+</html>

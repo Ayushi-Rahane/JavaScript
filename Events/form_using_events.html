@@ -1,0 +1,29 @@
+<html>
+    <body onload="alert('Welcome to Sanjivani K. B. P. Polytechnic')">
+      <center> <fieldset><h1><lengend>Registration form</lengend></h1>
+        <form onreset="alert('Reset')" onsubmit="alert('Form is submitted..')">
+       <label>Enter first name: </label><br>
+       <input type="text" id="fn" onchange="action();"><br><br>
+       <label>Enter last name: </label><br>
+       <input type="text" id="ln" onchange="action()";><br><br>
+       <label>Enter WhatsApp no. : </label><br>
+       <input type="number" id="wpno"><br><br>
+       <input type="submit" value="Submit" id="subbtn" onclick="btnaction(this);">
+       <input type="reset"  value ="Reset" id="rebtn">
+    </form>
+    </fieldset>
+</center>
+    </body>
+    <script>
+    function action(){
+        var ids = ["fn","ln"];
+        for(let i=0;i<ids.length;i++){
+       var name = document.getElementById(ids[i]).value;
+       console.log(name);
+       name=name.charAt(0).toUpperCase()+name.slice
+       (1);
+       document.getElementById(ids[i]).value = name;
+        }
+    }
+    </script>
+</html>
