@@ -39,16 +39,25 @@
             var sel2 = document.getElementById("sel2").value;
 
             if (sel2 === "State:") {
-                document.getElementById('t1').style.visibility = 'visible';
-                document.getElementById('l1').style.visibility='visible';
-                document.getElementById('l2').style.visibility='hidden';
-                document.getElementById('t2').style.visibility = 'hidden';
+                var a = ['t1','t2','l1','l2'];
+                for(i=0;i<a.length;i++){
+                    if(a[i]=='t1'||a[i]=='l1'){
+                    document.getElementById(a[i]).style.visibility ='visible';
+                    }
+                    else if(a[i]=='t2'||a[i]=='l2'){
+                    document.getElementById(a[i]).style.visibility ='hidden';
+                    }
+                }
             } else if (sel2 === "Population:") {
-              
-                document.getElementById('t2').style.visibility = 'visible';
-                document.getElementById('l2').style.visibility='visible';
-                document.getElementById('l1').style.visibility='hidden';
-                document.getElementById('t1').style.visibility = 'hidden';
+                var a = ['t1','t2','l1','l2'];
+                for(i=0;i<a.length;i++){
+                    if(a[i]=='t2'||a[i]=='l2'){
+                    document.getElementById(a[i]).style.visibility ='visible';
+                    }
+                    else if(a[i]=='t1'||a[i]=='l1'){
+                    document.getElementById(a[i]).style.visibility ='hidden';
+                    }
+                }
             }
         }
 
