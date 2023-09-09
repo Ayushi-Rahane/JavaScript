@@ -1,12 +1,16 @@
 <html>
     <body onload="document.getElementById('sel2').style.visibility='hidden'; 
     document.getElementById('t1').style.visibility='hidden';
-    document.getElementById('t2').style.visibility='hidden';">
+    document.getElementById('t2').style.visibility='hidden';
+    document.getElementById('l1').style.visibility='hidden';
+    document.getElementById('l2').style.visibility='hidden';">
      <select onchange="action();"  id="sel1">
+        <option>Select Country: </option>
         <option>India </option>
         <option>Russia </option>
         <option>China </option>
         <option>America </option>
+
      </select>
 
      <select  onchange="action2();" id="sel2">
@@ -14,8 +18,12 @@
         <option>State: </option>
         <option>Population: </option>
      </select>
-     <input type="text" id="t1" placeholder="State" onchange="settxt();">
-     <input type="text" id="t2" placeholder="Population">
+     <br>
+     <label id="l1">Enter State: </label>
+     <input type="text" id="t1" placeholder="State" onchange="settxt1();">
+     <br>
+     <label id="l2">Enter Population: </label>
+     <input type="number" id="t2" placeholder="Population" onchange="settxt2();">
 
      <p id="p1"></p>
     </body>
@@ -31,18 +39,27 @@
             var sel2 = document.getElementById("sel2").value;
 
             if (sel2 === "State:") {
-                state = document.getElementById('t1').value;
                 document.getElementById('t1').style.visibility = 'visible';
+                document.getElementById('l1').style.visibility='visible';
+                document.getElementById('l2').style.visibility='hidden';
                 document.getElementById('t2').style.visibility = 'hidden';
             } else if (sel2 === "Population:") {
-                ppl = document.getElementById('t2').value;
+              
                 document.getElementById('t2').style.visibility = 'visible';
+                document.getElementById('l2').style.visibility='visible';
+                document.getElementById('l1').style.visibility='hidden';
                 document.getElementById('t1').style.visibility = 'hidden';
             }
         }
 
-        function settxt() {
-            document.getElementById("p1").innerHTML = "Country: " + country + "<br> State: " + state + "<br> Population: " + ppl;
+        function settxt1() {
+            
+            state = document.getElementById('t1').value;
+            document.getElementById("p1").innerHTML = "Country: " + country + "<br> State: " + state;
+        }
+        function settxt2() {
+            ppl = document.getElementById('t2').value;
+            document.getElementById("p1").innerHTML = "Country: " + country + "<br> Population: " + ppl;
         }
     </script>
 </html>
