@@ -1,0 +1,72 @@
+<html>
+    <body onload=" var a =['l1','l2','t1','t2','sel2'];
+    for(let i=0;i<a.length;i++)
+    {document.getElementById(a[i]).style.visibility='hidden';}
+    ">
+        <select id="sel1" onchange="action()">
+            <option>Select Country: </option>
+            <option>India</option>
+            <option>China</option>
+            <option>Pakistan</option>
+            <option>Russia</option>
+        </select>
+        <select id="sel2" onchange="action2();">
+        <option>Select Option: </option>
+        <option>State </option>
+        <option>Population </option>
+    </select>
+    <br> <br>
+    <label id="l1">Enter State</label>
+    <input type="text" id="t1" onchange="display1();">
+    <br> <br>
+    <label id="l2">Enter Population: </label>
+    <input id="t2" type="number" onchange="display2();">
+
+    <p id="p1"></p>
+    </body> 
+
+    <script>
+        var country,state,ppl;
+   function action(){
+    country = document.getElementById("sel1").value;
+    document.getElementById("sel2").style.visibility = 'visible';
+    
+   }
+   function action2(){
+    var op = document.getElementById('sel2').value;
+    if(op=="State"){
+    var a = ['l1','l2','t1','t2'];
+    for(let i=0;i<a.length;i++){
+       if(a[i]=='l1' || a[i]=='t1'){
+        document.getElementById(a[i]).style.visibility='visible';
+       } 
+       else if(a[i]=='l2' || a[i]=='t2'){
+        document.getElementById(a[i]).style.visibility = 'hidden';
+       }
+
+    }
+    }
+    else if(op=="Population"){
+    var a = ['l1','l2','t1','t2'];
+    for(let i=0;i<a.length;i++){
+       if(a[i]=='l2' || a[i]=='t2'){
+        document.getElementById(a[i]).style.visibility='visible';
+       } 
+       else if(a[i]=='l1' || a[i]=='t1'){
+        document.getElementById(a[i]).style.visibility = 'hidden';
+       }
+
+    }
+    }
+   }
+
+   function display1(){
+    state = document.getElementById('t1').value;
+    document.getElementById('p1').innerHTML = "Country: "+country+"<br> State"+state;
+   }
+   function display2(){
+    ppl = document.getElementById('t2').value;
+    document.getElementById('p1').innerHTML = "Country: "+country+"<br> Population: "+ppl;
+   }
+    </script>
+</html>
