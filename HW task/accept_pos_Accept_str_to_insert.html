@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <label>Enter the index position to insert string: </label>
+        <input type="number" id="t1" >
+        <label>Enter the String to insert: </label>
+        <input type="text" id="t2" onchange="action();">
+        <p id="p1">Maharashtra State Board of Mumbai</p>
+    </body>
+    <script>
+        function action(){
+            var pos = document.getElementById("t1").value;
+            var r_str = document.getElementById("t2").value;
+            var o_str = document.getElementById("p1").innerHTML;
+            var f,l;
+            var a_str = o_str.split(" ");
+            
+            for(let i=0;i<a_str.length;i++){
+                if(i==pos){
+                    console.log("hehe");
+                    f = a_str.slice(0,i);
+                    l=" "+r_str+" "+a_str.slice(i).join(" ");
+                    a_str = f.join(" ")+l;
+                    
+                    break;
+                }
+            }
+         
+            console.log(a_str)
+            document.getElementById("p1").innerHTML=a_str;
+        }
+
+
+        
+    </script>
+</html>
