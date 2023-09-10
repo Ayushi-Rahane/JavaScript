@@ -1,0 +1,27 @@
+<!--Check the whether the set password is typed between the range of 0 to 9 only and it is consit of 4 digits-->
+<html>
+    <body>
+    <label>Enter password</label>
+    <input type="password" onkeyup="action(event);">
+    </body>
+    <script>
+   var count=0,passwd;
+   function action(e){
+    obj = e.target;
+    if(event.key>=0 &&  event.key<=9)
+    {
+       count++;
+       if(count==4){
+        alert("Your password is set successfully...");
+        obj.value="";
+
+       }    
+    }
+    else{
+        alert("-----Enter only numerical password of 4 Digits ----")
+        obj.value="";
+
+    }
+   }
+    </script>
+</html>
