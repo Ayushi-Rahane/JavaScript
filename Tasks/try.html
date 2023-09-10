@@ -27,6 +27,7 @@
 
     <script>
         var country,state,ppl;
+        
    function action(){
     country = document.getElementById("sel1").value;
     document.getElementById("sel2").style.visibility = 'visible';
@@ -61,10 +62,12 @@
    }
 
    function display1(){
+    
     state = document.getElementById('t1').value;
     document.getElementById('p1').innerHTML = "Country: "+country+"<br> State"+state;
    }
    function display2(){
+    
     ppl = document.getElementById('t2').value;
     document.getElementById('p1').innerHTML = "Country: "+country+"<br> Population: "+ppl;
    }
