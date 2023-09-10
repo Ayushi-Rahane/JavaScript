@@ -1,0 +1,36 @@
+<html>
+    <body>
+<button onclick="generate(this);">Generate OTP</button>
+<input type="text" readonly id="t1">
+<br>
+<br>
+<input type="text" id="t2">
+<button onclick="verify(this);">Verify</button>
+
+    </body>
+    <script>
+        var otp;
+        var t1=document.getElementById("t1");
+        var t2 =document.getElementById("t2");
+     function generate(obj){
+        max=1000;
+      min=9999;
+     otp = Math.floor(Math.random()*max-min+1000)+min;
+    t1.value = otp;
+     t2.value="";
+     }
+
+     function verify(obj){
+
+        if(otp==t2.value){
+           alert("YOU ARE HUMAN VALIDATION IS SUCCESSFULL...");
+            t2.value="";
+            
+        }
+        else{
+            alert("YOU ARE HUMAN VALIDATION IS UNSUCCESSFULL...");
+           t2.value="";
+        }
+     }
+    </script>
+</html>
