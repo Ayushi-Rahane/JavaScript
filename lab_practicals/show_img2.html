@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <input type="text" id="t1" onchange="add_img();">
+          <select id="sel2" onchange="insrt_img();">
+          <option>Choose image</option>
+          </select>
+    </body>
+    <script>
+        function add_img(){
+            var add_img = document.getElementById("t1").value;
+            var op_img = new Option(add_img,add_img);
+            document.getElementById("sel2").add(op_img,undefined);
+        }
+
+        function insrt_img(){
+            var a = ["car.jpg","flower.jpg","dog.jpg","cat.jpg","pencil.avif"];
+              for(i=0;i<a.length;i++){
+              if()     a[i].slice(0,a[i].indexOf("."));
+              
+              }
+            
+        }
+
+    </script>
+</html>

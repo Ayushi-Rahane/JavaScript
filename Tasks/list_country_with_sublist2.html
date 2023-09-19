@@ -1,0 +1,63 @@
+<html>
+    <body onload="var a=['l1','t1','sel2'];
+    for(let i=0;i<a.length;i++){
+        document.getElementById(a[i]).style.visibility='hidden';
+    }">
+     <select id="sel1" onchange="action1(this);">
+        <option>Select the country: </option>
+        <option>India</option>
+        <option>America</option>
+        <option>China</option>
+        <option>Japan</option>
+     </select>
+
+     <select id="sel2" onchange='action2(this);'>
+        <option>Select the option: </option>
+        <option>State</option>
+        <option>Population</option>
+     </select>
+     <br><br>
+     <label id="l1">Enter the state</label>
+     <input type="text" id="t1" onchange="settxt(this);">
+     <br>
+     <br>
+     <p id="p1"></p>
+    </body>
+    <script>
+        var country,state,ppl;
+        var t1 = document.getElementById('t1');
+        var l1 = document.getElementById('l1');
+      function action1(obj){
+        country = obj.value;
+        document.getElementById('sel2').style.visibility='visible'; 
+      }
+      function action2(obj){
+        if(obj.value =='State'){
+            t1.type="text";
+            l1.innerHTML="Enter the state"
+            t1.style.visibility='visible';
+            l1.style.visibility='visible';
+           
+        }
+        else if(obj.value=='Population'){
+            
+            t1.type="number";
+            l1.innerHTML="Enter the Population"
+            t1.style.visibility='visible';
+            l1.style.visibility='visible';
+        }
+      }
+
+      function settxt(obj){
+        var p = document.getElementById("p1");
+        if(obj.id=="t1" && obj.type=="text"){
+            state=obj.value;
+        p.innerHTML="Country: "+country+"<br>State: "+state;
+        }
+        else if(obj.id=="t1" && obj.type=="number"){
+            ppl=obj.value;
+            p.innerHTML="Country: "+country+"<br>Population: "+ppl;
+        }
+      }
+    </script>
+</html>

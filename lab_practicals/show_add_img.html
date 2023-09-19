@@ -22,14 +22,12 @@
 
     function insert_img(){
         var img = document.getElementById("sel");
-        var a = ["car.jpg","flower.jpg","dog.jpg","cat.jpg"];
-        var img_add;
+        var a = ["car.jpg","flower.jpg","dog.jpg","cat.jpg","pencil.avif","rangoli.webp"];
+   
         for(let i=0;i<a.length;i++){
-         img_add = a[i].slice(0,-4);
-         console.log(img_add);
-         console.log(img);
-        if(img_add==img.value.toLowerCase()){
-            console.log(img_add);
+          
+        if(a[i].slice(0,a[i].indexOf("."))==img.value.toLowerCase()){
+         
             document.body.style.backgroundImage="url("+"'"+a[i]+"'"+")";
             document.getElementById("p1").innerHTML="";
             break;

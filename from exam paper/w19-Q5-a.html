@@ -1,0 +1,32 @@
+<!-- Write a HTML script which displays 2 radio buttons to the users for fruits 
+and vegetables and 1 option list. When user select fruits radio button option 
+list should present only fruits names to the user & when user select vegetable 
+radio button option list should present only vegetable names to the user.-->
+<html>
+    <body>
+        <input type="radio"  name="op" onclick="action1();">Fruit <br>
+        <input type="radio" name="op"  onclick="action2();">Vegetable<br>
+        <select id="sel">
+
+        </select>
+    </body>
+    <script>
+   function action1(){
+    var sel = document.getElementById("sel");
+    var fruits = ["Apple","Banana","grapes","Jamun"];
+      for(i=0;i<fruits.length;i++){
+           op = new Option(fruits[i],fruits[i]);
+           
+           sel.add(op,undefined);
+       }
+       document.getElementById("sel").value="";
+   }
+   function action2(){
+    var vegetable = ["Tomato","Potato","Spinach"];
+    for(i=0;i<vegetable.length;i++){
+        op = new Option(vegetable[i],vegetable[i]);
+        document.getElementById("sel").add(op,undefined);
+    }
+   }
+    </script>
+</html>
