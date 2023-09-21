@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <input type="password" onkeyup="action(event);">
+        <p id="p1"></p>
+    </body>
+    <script>
+        var count=0,passwd="";
+        function action(e){
+            if(count==0){
+            passwd="";
+           }
+            obj = e.target;
+            document.getElementById("p1").textContent=""; 
+        if(e.key>=0 && e.key<=9){
+           count++;
+           passwd=passwd+e.key;
+           if(count==4){
+            alert("Your password is set")
+           document.getElementById("p1").innerHTML=passwd;
+            obj.value="";
+            count=0;
+           }
+           
+        }
+        else{
+            alert("Enter only number");
+            document.getElementById("p1").textContent=""; 
+            obj.value="";
+        }
+        }
+
+    </script>
+</html>

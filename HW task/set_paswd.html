@@ -2,7 +2,7 @@
 <html>
     <body>
     <label>Enter password</label>
-    <input type="password" onkeyup="action(event);">
+    <input type="password" onkeyup="action(event);" onchange="verify(this);">
     </body>
     <script>
    var count=0,passwd;
@@ -11,17 +11,23 @@
     if(event.key>=0 &&  event.key<=9)
     {
        count++;
-       if(count==4){
-        alert("Your password is set successfully...");
-        obj.value="";
-
-       }    
     }
     else{
         alert("-----Enter only numerical password of 4 Digits ----")
         obj.value="";
-
+       count=0;
     }
+   }
+   function verify(obj){
+    if(obj.value=="1234"){
+        obj.value="";
+        count=0;
+        alert("Welcome");
+       }
+       else if(obj.value!="1234"){
+          alert("Wrong credentials");
+       }
    }
     </script>
 </html>
+

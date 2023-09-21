@@ -1,0 +1,41 @@
+<html>
+    <body>
+     <label id="l">Username</label>
+     <input id="t" onchange="action(this);">
+    </body>
+    <script>
+        l = document.getElementById("l");
+        
+        var count=0,username="",passwd="";
+
+        function action(obj){
+           ;
+           if((++count)==1){
+           username=obj.value;
+           obj.value="";
+           l.innerHTML="Password";
+           obj.type="password";
+           }
+           else if(count==2){
+
+           passwd=obj.value;
+          if(passwd=="123" && username=="admin"){
+                alert("Welcome");
+                obj.value="";
+                count=0;
+            }
+            else{
+                alert("Wrong credentials");
+                l.innerHTML="Username";
+                obj.type="text";
+                obj.value="";
+                count=0;
+
+
+            }
+           } 
+
+        }
+
+    </script>
+</html>
