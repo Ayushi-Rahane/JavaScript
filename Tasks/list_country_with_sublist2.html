@@ -18,8 +18,8 @@
      </select>
      <br><br>
      <label id="l1">Enter the state</label>
-     <input type="text" id="t1" onchange="settxt(this);">
-     <br>
+     <input type="text" id="t1" onchange=" if(document.getElementById('t1').value != null){console.log(document.getElementById('t1').value+'this country: '+document.getElementById('sel1').value)}">
+     <br>   
      <br>
      <p id="p1"></p>
     </body>
@@ -33,21 +33,23 @@
       }
       function action2(obj){
         if(obj.value =='State'){
+        
             t1.type="text";
             l1.innerHTML="Enter the state"
             t1.style.visibility='visible';
             l1.style.visibility='visible';
+          
            
         }
         else if(obj.value=='Population'){
-            
+          
             t1.type="number";
             l1.innerHTML="Enter the Population"
             t1.style.visibility='visible';
             l1.style.visibility='visible';
         }
       }
-
+/* 
       function settxt(obj){
         var p = document.getElementById("p1");
         if(obj.id=="t1" && obj.type=="text"){
@@ -56,8 +58,8 @@
         }
         else if(obj.id=="t1" && obj.type=="number"){
             ppl=obj.value;
-            p.innerHTML="Country: "+country+"<br>Population: "+ppl;
+            
         }
-      }
+      } */
     </script>
 </html>
