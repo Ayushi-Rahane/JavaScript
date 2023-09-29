@@ -1,0 +1,43 @@
+<html>
+    <body>
+   
+        <button onclick="startbtn();">Start Timer</button>
+        <button onclick="stopbtn();">Stop Timer</button>
+        <p id="p1">00 : 00 : 00</p>
+    </body>
+    <script>
+        var sec=0,hr=0,min=0,id;
+      var  p1 = document.getElementById("p1");
+        function start(){
+          sec++
+            if(sec==60){
+              min++;
+              sec=0;
+            }
+            if(min==60){
+                hr++;
+                min=0;
+            }
+            if(sec<10 && min<10 && hr<10){
+            p1.innerHTML="0"+hr+" : "+"0"+min+" : "+"0"+sec;
+            }
+            else if(sec>=10 && min<10 && hr<10){
+                p1.innerHTML="0"+hr+" : "+"0"+min+" : "+sec;
+            }
+            else if(sec>=10 && min>=10 && hr<10){
+                p1.innerHTML="0"+hr+" : "+min+" : "+sec;
+            }
+            else{
+                document.getElementById("p1").innerHTML=hr+" : "+min+" : "+sec;
+            }
+        }
+        
+        function startbtn(){
+        id=setInterval(start,1000)
+        }
+        function stopbtn(){
+            clearInterval(id);
+        }
+
+    </script>
+</html>
