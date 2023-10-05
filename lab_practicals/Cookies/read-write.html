@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <label id = 'l1'>Enter key: </label>
+        <input type="text" id="i1">
+        <br>
+        <br>
+        <label id="l2">Enter value: </label>
+        <input type="text" id="i2">
+        <br>
+        <br>
+        <button onclick="setcookie();">Write Cookie</button>
+        <br>
+        <br>
+        <button onclick="getcookie();">Read Cookie</button>
+     
+        <br>
+        <p id="p1"></p>
+    </body>
+    <script>
+        var i1 = document.getElementById("i1");
+        var i2 = document.getElementById("i2");
+        function setcookie(){
+        var in1 = i1.value, in2 = i2.value;
+            if(in1.length !=0 && in2.length!=0){
+            
+        document.cookie = in1+":"+in2; 
+            }
+            else{
+                alert("Cookie is empty");
+            }
+            
+        }
+        function getcookie(){
+             document.getElementById('p1').innerHTML=document.cookie;
+        }
+    </script>
+</html>

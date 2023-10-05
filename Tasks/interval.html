@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <button onclick="start();">start</button>
+        <br>
+        <br>
+        <button onclick="stop();">Stop</button>
+    </body>
+    <script>
+        var i1=0,id,i2=0,a=0,b=3;
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+       function start(){
+        //i++
+         //if(i==i*2){
+        //    p1.innerHTML=i1++;
+          //  p1.innerHTML = i2++ *2;
+     /*     i2++ *2;
+          i1++;
+   
+          p1.innerHTML=i2;
+                p1.innerHTML = i1;
+   */
+
+   for(let i=0;;i++){
+    p1.innerHTML=i;
+    for(j=i+1;;j++){
+        p1.innerHTML=j;
+    }
+   }
+            
+            //p.innerHTML=i*2;
+           /* }
+            else if(i==b){
+                p.innerHTML=i;
+            }*/
+        id = setInterval(start,1000);
+           
+       }
+
+       function stop(){
+        clearInterval(id)
+       }
+    </script>
+</html>
+

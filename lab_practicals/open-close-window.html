@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <button onclick="openwin();">Open window</button>
+    <br>
+    <br>
+    <button onclick="closewin();">Close Window</button>
+  </body>
+  <script>
+    var win_id;
+
+    function openwin(){
+        win_id = window.open("",600,600);
+    }
+
+    function closewin(){
+         win_id.close();
+    }
+  </script>
+</html>
