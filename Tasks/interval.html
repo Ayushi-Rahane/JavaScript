@@ -1,40 +1,17 @@
-<html>
+<!--html>
     <body>
         <p id="p1"></p>
-        <p id="p2"></p>
         <button onclick="start();">start</button>
         <br>
         <br>
         <button onclick="stop();">Stop</button>
     </body>
     <script>
-        var i1=0,id,i2=0,a=0,b=3;
+        var sec=0;
         var p1 = document.getElementById("p1");
         var p2 = document.getElementById("p2");
        function start(){
-        //i++
-         //if(i==i*2){
-        //    p1.innerHTML=i1++;
-          //  p1.innerHTML = i2++ *2;
-     /*     i2++ *2;
-          i1++;
-   
-          p1.innerHTML=i2;
-                p1.innerHTML = i1;
-   */
-
-   for(let i=0;;i++){
-    p1.innerHTML=i;
-    for(j=i+1;;j++){
-        p1.innerHTML=j;
-    }
-   }
-            
-            //p.innerHTML=i*2;
-           /* }
-            else if(i==b){
-                p.innerHTML=i;
-            }*/
+   document.getElementById("p1").innerHTML=sec++;
         id = setInterval(start,1000);
            
        }
@@ -43,5 +20,36 @@
         clearInterval(id)
        }
     </script>
-</html>
+</html-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arushi</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <button onclick="start();">Start</button>
+    <br>
+    <br>
+    <button onclick="stop();">Stop</button>
+
+    <script>
+        var sec = 0;
+        var p1 = document.getElementById("p1");
+        var id;
+
+        function start() {
+            id = setInterval(function () {
+                p1.innerHTML = sec++;
+            }, 1000);
+        }
+
+        function stop() {
+            clearInterval(id);
+        }
+    </script>
+</body>
+</html>

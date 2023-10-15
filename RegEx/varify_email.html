@@ -5,7 +5,7 @@
     </body>
     <script>
         function verify(obj){
-            p = /\W*(@gmail.com|@yahoo.com)$/;
+            p = /\w+(@gmail.com|@yahoo.com)$/;
             if(p.test(obj.value)){
                 document.write("Valid Email");
             }

@@ -1,0 +1,35 @@
+<html>
+    <body onload="document.getElementById('in').style.visibility='hidden';">
+        <button onclick="document.getElementById('in').style.visibility='visible';">Create Cookie</button>
+        <input type="text" parameter="Enter Cookie Value" id="in" onchange="create_cookie();">
+
+        <br> <br>
+        <button onclick="read_cookie();">Read Cookie</button>
+        
+        <button onclick="delete_cookie();">Delete Cookie</button>
+        <br> 
+        <p id="p1"></p>
+
+        <br>
+        <br>
+    </body>
+    <script>
+        var c= document.getElementById('in');
+        var p1 = document.getElementById('p1');        function create_cookie(){
+            document.cookie = "cookiename="+c.value+"; expires=Thu, 21 Oct 2023 20:00:00 UTC";
+            p1.innerHTML=""; 
+        }
+
+        function read_cookie(){
+          p1.innerHTML = document.cookie;
+          c.value="";
+          c.style.visibility='hidden';
+        }
+         function delete_cookie(){
+                c.value="";
+                document.cookie = "cookiename="+c.value;
+                p1.innerHTML="Cookie Deleted Successfully..";
+                c.style.visibility='hidden';
+         }
+    </script>
+</html>
