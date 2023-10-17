@@ -65,7 +65,6 @@
     background-color:#F1B4BB;
     color:#132043;
 }
-
        </style>
     </head>
     <body onload="addTask.style.visibility='hidden';
@@ -103,8 +102,6 @@
   }
   
   function add_task(){
-   
-    
     if(addTask.value.length !=0){
         var ckcbox = document.createElement('input');
         var label = document.createElement('label')
@@ -129,16 +126,11 @@
                     label.innerHTML = addTask.value;
                 }
             });
-        
         addTask.value="";
-        
         addTask.style.visibility='hidden';
         addBtn.style.visibility='hidden';
         
     }
-   
-
   }
     </script> 
-
 </html>
