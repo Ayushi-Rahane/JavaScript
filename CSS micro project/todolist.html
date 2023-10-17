@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>To do List</title>
+       <style>
+        body{
+    margin:0px;
+    background-color:132043;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.to-do-list-div{
+    background-color:#1F4172;
+    width:400px;
+    
+}
+.header-div{
+    display:flex;
+    
+  align-items: center;
+  justify-content: center;
+}
+.add_task_btn{
+    box-shadow: rgba(236, 196, 236, 0.4) 0px 0px 0px 2px, rgba(44, 6, 36, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color:#F1B4BB;
+    color:#1F4172;
+    width:120px;
+    height:42px;
+    border:none;
+    border-radius:20px;
+}
+
+.add_task_btn:hover{
+  background-color:#132043;
+  color:#F1B4BB;
+}
+.add_task_btn:active{
+    opacity:0.8;
+}
+
+.add_item_div{
+    display:flex;
+}
+
+.add_task{
+    height:30px;
+    border:none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add_btn{
+    height:30px;
+    width:60px;
+    border:none;
+    background-color:#132043;
+    color:#FDF0F0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add_btn:hover{
+    background-color:#F1B4BB;
+    color:#132043;
+}
+
+       </style>
+    </head>
+    <body onload="addTask.style.visibility='hidden';
+    addBtn.style.visibility='hidden';">
+    <div class="to-do-list-div">
+        <fieldset style="border:none;">
+            <div class="header-div">
+                <center> <h1 style="color:#FDF0F0">To Do List</h1><br></center>
+            </div>
+            <div class="add_task_btn_div">
+                <button onclick="add_task_btn();" class="add_task_btn">Add Task</button><br><br>             
+            </div>
+            <div class="add_item_div">
+                <div class="item_text_div"> 
+                    <input type="text" onchange="add_task();" id="add_task" class="add_task">
+                </div>
+                <div class="add_btn-div">
+                    <button onclick="add_task();" id="add_btn" class="add_btn">Add</button>
+                    
+                </div>
+            </div>
+   
+            <ul id="task-list">
+    </ul>
+</fieldset>
+</div>
+    </body>
+    <script>
+        var addTask = document.getElementById("add_task");
+        var addBtn = document.getElementById("add_btn");
+        var taskList = document.getElementById('task-list');
+  function add_task_btn(){
+    addTask.style.visibility='visible';
+    addBtn.style.visibility='visible';
+  }
+  
+  function add_task(){
+   
+    
+    if(addTask.value.length !=0){
+        var ckcbox = document.createElement('input');
+        var label = document.createElement('label')
+        label.style.color="#FDF0F0";
+        label.style.fontSize='23px';
+        var taskItem = document.createElement('li');
+        taskItem.style.listStyleType = 'none'; 
+        label.innerHTML = addTask.value;
+        var addTaskValue = addTask.value;
+        
+     
+        taskItem.appendChild(ckcbox).type = 'checkbox';
+        taskItem.appendChild(label);
+         taskList.appendChild(taskItem);
+
+        ckcbox.addEventListener('change', function () {
+                if (this.checked) {
+                    label.remove();
+                    ckcbox.remove();
+                    taskItem.remove();
+                } else {
+                    label.innerHTML = addTask.value;
+                }
+            });
+        
+        addTask.value="";
+        
+        addTask.style.visibility='hidden';
+        addBtn.style.visibility='hidden';
+        
+    }
+   
+
+  }
+    </script> 
+
+</html>
