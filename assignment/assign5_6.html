@@ -1,0 +1,19 @@
+<!-- Write a JavaScript code to define pattern for verifying mobile number 
+and email ID-->
+
+<html>
+<script>
+  var mbNo = prompt("Enter mobile no.: ");
+  var email = prompt("Enter Email Id: ");
+   mbNo_pattern  =/^\+\d{1,2}\d{10}$/;
+   var email_pattern = /\S+@\S+(\.\S{2,3}?\.\S{2,3})$/;
+
+    if(mbNo_pattern.test('+919890982937') && email_pattern.test('ayuhs@gmail.co.in')){
+        document.write("WELCOME");
+    }
+    else{
+        document.write("Invalid");
+    }
+
+</script>
+</html>
