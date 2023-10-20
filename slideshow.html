@@ -1,0 +1,44 @@
+<html>
+    <body onload="display_info();">
+    <div>
+
+   <button onclick="chg_img(-1);" align="left"><img  src="left_arrow.png" width="20" height="30">
+   </button>
+    <div style="display:inline-block;
+    width:330px;
+    height:200px;
+    ">
+    <img align="center" src="download.jpg" id="i">
+</div>
+<button align="right"  onclick="chg_img(1);" ><img src="Right_arrow.png" width="20" height="30"></button>
+  
+  <p id="p1"></p>
+     </div>   
+    </body>
+    <script>
+var i = 0;
+var a= ["download.jpg","cat.jpg","flower.jpg","dog.jpg"]
+
+function chg_img(incre){
+    i=i+incre;
+    if(i>=a.length){
+        i=0;
+    }
+    else if(i<0){
+        i=a.length-1;
+    }
+
+    document.getElementById('i').src=a[i];
+  display_info();
+}
+
+function display_info(){
+    var info=["fish","cat","Flower","Dog"];
+   for(let j=0;j<info.length;j++){
+    if(a[i]==a[j]){
+        document.getElementById('p1').innerHTML=info[i];
+    }
+   }
+}
+    </script>
+</html>

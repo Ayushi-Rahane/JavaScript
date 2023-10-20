@@ -2,12 +2,12 @@
     <head>
         <title>To do List</title>
        <style>
-        body{
+body{
     margin:0px;
     background-color:#7f9ef4;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .to-do-list-div{
@@ -18,9 +18,8 @@
 }
 .header-div{
     display:flex;
-    
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .add_task_btn{
     box-shadow: rgba(236, 196, 236, 0.4) 0px 0px 0px 2px, rgba(44, 6, 36, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -110,7 +109,7 @@
         var taskItem = document.createElement('li');
         taskItem.style.listStyleType = 'none'; 
         label.innerHTML = addTask.value;
-        var addTaskValue = addTask.value;
+
         
      
         taskItem.appendChild(ckcbox).type = 'checkbox';
@@ -122,8 +121,6 @@
                     label.remove();
                     ckcbox.remove();
                     taskItem.remove();
-                } else {
-                    label.innerHTML = addTask.value;
                 }
             });
         addTask.value="";

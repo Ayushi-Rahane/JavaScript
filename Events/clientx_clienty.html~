@@ -1,5 +1,5 @@
 <html>
-    <body id="b" onmouseover="coordinate(event);" onmouseout="coordinate(event);"
+    <body id="b" onmousemove="coordinate(event);" onmouseout="coordinate(event);"
     onmouseup="coordinate(event);"
     onmousedown="coordinate(event);
     "onclick="coordinate(event);">

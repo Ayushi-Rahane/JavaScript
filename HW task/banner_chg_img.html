@@ -1,0 +1,25 @@
+<html>
+
+<body>
+<img src="car.jpg" id="i">
+<input value="previous" type="button" onclick="chg_img(-1);">
+<input value="next" type="button" onclick="chg_img(1);">
+</body>
+
+<script>
+var i=0;
+var a = ["car.jpg","cat.jpg","flower.jpg","dog.jpg"];
+function chg_img(obj){
+     i=i+obj
+    if(i>=a.length){
+         i=0;
+    }
+    else if(i<0){
+        i=a.length-1;
+
+    }
+
+    document.getElementById('i').src=a[i];
+}
+</script>
+</html>
