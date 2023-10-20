@@ -11,8 +11,9 @@ body{
 }
 
 .to-do-list-div{
+
     background-color:#1F4172;
-    width:400px;
+
     border-radius:45px;
     box-shadow: rgba(190, 205, 216, 0.3) 0px 1px 2px 0px, rgba(149, 159, 167, 0.15) 0px 2px 6px 2px;
 }
@@ -64,10 +65,30 @@ body{
     background-color:#F1B4BB;
     color:#132043;
 }
+legend{
+    color:#FDF0F0;
+    width:120px;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.complete-item{
+    padding:20px;
+    margin-right:12px;
+    color:white;
+    background-color:#3b5292;
+    border-radius:6px;
+
+}
+.complete-text-item-label{
+    /*text-decoration:line-through;*/
+    font-size:20px;
+}
        </style>
     </head>
     <body onload="addTask.style.visibility='hidden';
-    addBtn.style.visibility='hidden';">
+    addBtn.style.visibility='hidden';
+    completeItemDiv.style.visibility='hidden';">
     <div class="to-do-list-div">
         <fieldset style="border:none;">
             <div class="header-div">
@@ -84,7 +105,14 @@ body{
                     <button onclick="add_task();" id="add_btn" class="add_btn">Add</button>
                     
                 </div>
+                <div class="complete-item" id="completeItemDiv">
+                     <legend>Completed Task</legend>
+                     <ul id="complete-list">
+
+                     </ul>
+                     </div>
             </div>
+            
    
             <ul id="task-list">
     </ul>
@@ -94,7 +122,9 @@ body{
     <script>
         var addTask = document.getElementById("add_task");
         var addBtn = document.getElementById("add_btn");
+        var completeItemDiv = document.getElementById("completeItemDiv");
         var taskList = document.getElementById('task-list');
+        var completeList = document.getElementById('complete-list');
   function add_task_btn(){
     addTask.style.visibility='visible';
     addBtn.style.visibility='visible';
@@ -118,6 +148,14 @@ body{
 
         ckcbox.addEventListener('change', function () {
                 if (this.checked) {
+                    completeItemDiv.style.visibility='visible';
+                    var completeItem  = document.createElement('li');
+                    var span = document.createElement('span');
+                     span.className='complete-text-item-label';
+                    completeItem.style.listStyleType='none';
+                    completeItem.appendChild(span);
+                    completeList.appendChild(completeItem);
+                    span.textContent = " ✓ "+label.innerHTML;
                     label.remove();
                     ckcbox.remove();
                     taskItem.remove();
