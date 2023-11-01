@@ -1,0 +1,22 @@
+<html>
+    <body onload="move()">
+        <img id="img" src="flower.jpg" width="400" height="400">
+    </body>
+    <script>
+    var i=0;
+    var a =['flower.jpg','cat.jpg','dog.jpg'];
+
+    function move(){
+       i++;
+       if(i>=a.length){
+        i=0;
+       }
+       else if(i<0){
+               i = a.length-1;
+       }
+       document.getElementById("img").src=a[i];
+      
+    }
+    setInterval(move,3000);
+    </script>
+</html>

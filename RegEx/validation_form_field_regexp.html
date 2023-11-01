@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <form>
+            <label>Enter username: </label>
+            <input type="text" onchange="validate_user(this);">
+            <br><br>
+            <label>Enter password</label>
+            <input type="password" onchange="validate_pass(this);">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script>
+       function validate_user(obj){
+          var p = /\s\w/;
+          if(p.test(obj.value)){
+            alert("White space are not acceptable...");
+            obj.value="";
+          }
+       }
+
+       function validate_pass(obj){
+           var p = /.{7}/;
+           if(p.test(obj.value) != true){
+            alert("Enter password of 7 characters only...");
+           }
+       }
+
+    </script>
+
+</html>

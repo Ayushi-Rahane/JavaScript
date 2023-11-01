@@ -1,0 +1,17 @@
+<!--Reading the value of cookiename "userID"-->
+<html>
+<script>
+document.cookie="userID=12345; path=/; secure";
+
+var cookieValue = document.cookie.split(";");
+console.log(cookieValue);
+
+for (let i = 0; i < cookieValue.length; i++) {
+    if (cookieValue[i].trim().startsWith("userID=")) {
+        console.log(cookieValue[i].trim().substring("userID=".length));
+        break; // Exit the loop once the cookie is found
+    }
+}
+</script>    
+
+</html>

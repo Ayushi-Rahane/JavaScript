@@ -1,0 +1,21 @@
+<html>
+    <body>
+      <form>
+        <label>Enter username: </label>
+        <input type="text" id="username">
+
+        <label>Enter Password: </label>
+        <input type="password" id="password">
+        <input type="button" value="submit" onclick="store_cookie();">
+      </form>
+    </body>
+    <script>
+        function store_cookie(){
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            document.cookie=user+"="+pass+"; path=/";
+            alert("Cookie is stored successfully...")
+        }
+ 
+    </script>
+</html>
