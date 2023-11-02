@@ -1,12 +1,22 @@
 <!--Write a javascript to open a new window and the new window is having two frames. One frame containing buthon as “click here !”, and after clicking this button an image should open in the second frame-->
 
+<!DOCTYPE html>
 <html>
-    <body>
-        <button onclick="open_window();">Open new window</button>
-    </body>
-    <script>
-    function open_window(){
-        newWindow = window.open();
-        
-     </script>
+<head>
+  <title>Two-Frames Window</title>
+</head>
+<body>
+  <button onclick="openNewWindow()">Open New Window</button>
+
+  <script>
+    let newWindow;
+
+    function openNewWindow() {
+      // Open a new window with two frames
+      newWindow = window.open("", "_blank", "width=400,height=200");
+      newWindow.document.write('<html><head><title>New Window</title></head><frameset rows="50%,50%"><frame id="frame1" name="frame1" src="frame1.html"><frame id="frame2" name="frame2" src="frame2.html"></frameset></html>');
+      newWindow.document.close();
+    }
+  </script>
+</body>
 </html>
