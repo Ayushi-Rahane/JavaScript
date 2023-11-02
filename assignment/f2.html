@@ -1,11 +1,14 @@
+
 <html>
     <body>
         <p>FRAME 2</p>
          <ul>
-            <li><a href="fruits.html">FRUITS</a></li>
-            <li><a href="flowers.html">FLOWERS</a></li>
-            <li><a href="cities.html">CITIES</a></li>
+            <li><a href="fruits.html" onclick='window.parent.f3.document.body.innerHTML="This is fruits";'>FRUITS</a></li>
+            <li><a onclick='window.parent.f3.document.body.innerHTML="This is flowers";' href="flowers.html">FLOWERS</a></li>
+            <li><a onclick='window.parent.f3.document.body.innerHTML="This is cities";' href="cities.html">CITIES</a></li>
          </ul>
 
     </body>
+    <script>
+     </script>   
 </html>

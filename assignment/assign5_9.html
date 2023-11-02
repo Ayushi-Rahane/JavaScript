@@ -1,10 +1,22 @@
+<!-- Write a script for creating following frame structure
+      FRAME 1
+FRAME 2      FRAME 3
+• FRUITS
+• FLOWERS
+• CITIES
+
+FRUITS, FLOWERS and CITIES are links to the webpage
+fruits.html, flowers.html, cities.html respectively. When
+these links are clicked corresponding data appears in
+FRAME 3.-->
+
 <html>
-    <frameset row="30%,70%">
+    <frameset rows="30%,70%">
         <frame src="f1.html">
 
         <frameset cols="60%,40%">
             <frame src="f2.html">
-             <frame src="f3.html">
+             <frame name="f3"  src="f3.html">
         </frameset>
     </frameset>
 </html>

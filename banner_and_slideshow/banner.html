@@ -1,21 +1,22 @@
 <html>
     <body onload="move()">
-        <img id="img" src="flower.jpg" width="400" height="400">
+       <a href="xyz.com" id="li"><img id="img" src="flower.jpg" width="400" height="400"></a>
+        
     </body>
     <script>
     var i=0;
     var a =['flower.jpg','cat.jpg','dog.jpg'];
-
+    var link = ['xyz.com','abc.com','12w.com']
     function move(){
        i++;
        if(i>=a.length){
         i=0;
        }
-       else if(i<0){
+       else if(i<0){ 
                i = a.length-1;
        }
        document.getElementById("img").src=a[i];
-      
+      document.getElementById("li").href=link[i];
     }
     setInterval(move,3000);
     </script>
