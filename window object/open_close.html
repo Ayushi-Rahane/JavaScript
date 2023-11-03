@@ -1,0 +1,18 @@
+<!--Design a page which contents two push button namely "openNewWindow" "closeWindow".
+Write a JS to define a function to open a new window and close window-->
+<html>
+    <body>
+    <button onclick="winOpen();">openNewWindow</button>
+    <button onclick="winClose();">closeWindow</button>
+    </body>
+
+    <script>
+        var myWindow;
+        function winOpen(){
+            myWindow = window.open();
+        }
+        function winClose(){
+            myWindow.close();
+        }
+    </script>
+</html>

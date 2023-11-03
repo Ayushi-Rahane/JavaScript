@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Selection Validation</title>
+</head>
+<body>
+  <h1>Menu Selection Validation</h1>
+  <form id="menuForm" onsubmit="return validateSelection()">
+    <label for="menu">Select an option:</label>
+    <select id="menu" name="menu">
+      <option value="">Select an option</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    function validateSelection() {
+      var selectedOption = document.getElementById("menu").value;
+      var messageElement = document.getElementById("message");
+
+      if (selectedOption === "") {
+        messageElement.textContent = "Please select an option.";
+        messageElement.style.color = "red";
+        return false; // Prevent form submission
+      } else {
+        messageElement.textContent = "Option selected: " + selectedOption;
+        messageElement.style.color = "green";
+        return true; // Allow form submission
+      }
+    }
+  </script>
+</body>
+</html>
+l
