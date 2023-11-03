@@ -1,0 +1,21 @@
+<!--Design a webpage which consist of two link buttons namely "MSBTE" and "AICTE".
+Define a rollover for link btns to display a message on a status bar.
+msg1: "Click link btn to visit msbte.org.in"
+msg2: "Click link btn to visit aicte.com"-->
+
+<html>
+    <body>
+        <a href="msbte.org.in" onmouseover="func1();">MSBTE</a>
+        <br> <br>
+        <a href="aicte.com" onmouseover="func2();">AICTE</a>
+    </body>
+    <script>
+        function func1(){
+            window.status = "Click link buttons to visit msbte"
+        }
+
+        function func2(){
+            window.status = "Click link buttons to visit aicte"
+        }
+    </script>
+</html>

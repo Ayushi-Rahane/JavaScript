@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form name="f">
+        <input type="checkbox" name="name">
+
+        <button onclick="disablefunc();">Disable</button>
+        <br> <br>
+        
+        <button onclick="enablefunc();">Enable</button>
+    </form>
+</body>
+<script>
+    function disablefunc() {
+        document.forms.f.name.disabled = true;
+    }
+    
+    function enablefunc() {
+        document.forms.f.name.disabled = false;
+    }
+</script>
+</html>
