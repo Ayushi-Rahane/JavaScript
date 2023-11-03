@@ -1,0 +1,22 @@
+<!--Write a JavaScript to implement onchnage event handler, when we chnages list option it should display "You have selected"+list_value--->
+<html>
+    <body>
+        <select onchange="display(this);">
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Mouse">Mouse</option>
+
+        </select>
+        <p id="p1">
+
+        </p>
+
+    </body>
+    <script>
+        function display(obj){
+            var list_value = obj.value;
+            document.getElementById("p1").innerHTML="You have selected "+list_value;
+
+        }
+    </script>
+</html>
