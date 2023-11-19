@@ -1,0 +1,105 @@
+<html>
+    <style>
+        p{
+            display:inline-block;
+        }
+    </style>
+    <body>
+        <div>
+            <p id="q">What is the capital of Australia?</p>
+        </div>
+        
+        <input type="radio" name="An" id="A1" value="Sydney
+" onclick="validate();"> <p id="opt1">Sydney
+</p>
+        <br>
+        <input type="radio" name="An" id="A2" value="Melbourne" > <p id="opt2">Melbourne</p>
+        <br>
+        <input type="radio" name="An" id="A3" value="Canberra" > <p id="opt3">Canberra</p>
+        <br>
+        <input type="radio" name="An" id="A4" value=" Brisbane" > <p id="opt4"> Brisbane</p>
+        <br>
+        <input type="button" value="next" onclick="validate();">
+    </body>
+    <script>
+        var ques = document.getElementById("q");
+        
+        var O1 = document.getElementById("A1");
+        var O2 = document.getElementById("A2");
+        var O3 = document.getElementById("A3");
+        var O4 = document.getElementById("A4");
+
+        var opt1 = document.getElementById("opt1");
+        var opt2 = document.getElementById("opt2");
+        var opt3 = document.getElementById("opt3");
+        var opt4 = document.getElementById("opt4");
+        var count=0;
+    var opt_id=["A1","A2","A3","A4"];
+    var selectedOption;   
+    var Q = ["What is the capital of Australia?","Who is the author of the book 'To Kill a Mockingbird'?","Q3"];
+    var A = ["Canbera","Harper Lee","A3"];
+    var i=0;
+    var ans_count=0;
+    var Q1 = ["Sydney","Melbourne","Canberra"," Brisbane"]
+    var Q2 = ["J.K. Rowling","George Orwell","Harper Lee","Charles Dickens"];
+    var Q3 = ["II","A3","KK","LL"]
+    function validate(){
+
+      selectedOption = document.querySelector('input[name="An"]:checked');
+      if(selectedOption){
+      selectedOption.checked=false;
+      if(selectedOption.value==A[i]){
+          ans_count++;
+          console.log("Correct answer");
+                console.log("Seected Value: " + selectedOption.value);
+      }
+      else{
+        console.log("Wrong answer")
+      }
+    }
+    else{
+      alert("Kindly select option")
+    }
+
+    i++;   
+    if(i>=Q.length){
+          alert("Correct answer: "+ans_count+"\n out of 3");
+          window.close();
+         }
+    ques.innerHTML= Q[i];
+      if(Q[i]=="What is the capital of Australia?"){
+        opt1.innerHTML=Q1[0];
+        opt2.innerHTML=Q1[1];
+        opt3.innerHTML=Q1[2];
+        opt4.innerHTML=Q1[3];
+        O1.value=Q1[0];
+        O2.value=Q1[1];
+        O3.value=Q1[2];
+        O4.value=Q1[3];
+
+      }
+      else if(Q[i]=="Who is the author of the book 'To Kill a Mockingbird'?"){
+        opt1.innerHTML=Q2[0];
+        opt2.innerHTML=Q2[1];
+        opt3.innerHTML=Q2[2];
+        opt4.innerHTML=Q2[3];
+        O1.value=Q2[0];
+        O2.value=Q2[1];
+        O3.value=Q2[2];
+        O4.value=Q2[3];
+
+      }
+      else if(Q[i]=="Q3"){
+        opt1.innerHTML=Q3[0];
+        opt2.innerHTML=Q3[1];
+        opt3.innerHTML=Q3[2];
+        opt4.innerHTML=Q3[3];
+        O1.value=Q3[0];
+        O2.value=Q3[1];
+        O3.value=Q3[2];
+        O4.value=Q3[3];
+      }
+    }
+  
+    </script>
+</html>

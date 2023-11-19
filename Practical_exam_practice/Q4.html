@@ -1,0 +1,32 @@
+<!--Write a Javascript to design a form to accept values for user ID & password.-->
+
+<html>
+    <body>
+        <form>
+            <label for="in">Enter user ID: </label>
+            <input type="text" id="in">
+            <br>
+            <br>
+            <label for="pass">Enter password: </label>
+            <input type="password" id="pass">
+            <br>
+            <br>
+            <input type="button" value="done" onclick="action1()">
+
+        </form>
+
+    </body>
+    <script>
+        function action1(){
+            var i = document.getElementById("in");
+            var pass = document.getElementById("pass");
+            if(i.value==="Admin" && pass.value==="123"){
+                alert("Welcome");
+            }
+            else{
+                alert("Error");
+    
+            }
+        }
+    </script>
+</html>

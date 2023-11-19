@@ -1,0 +1,80 @@
+<html>
+    <body>
+
+     <p id="ques">Who is PM of India? </p>
+     <input id="a1" name="ans" type="radio" value="A1"><p id="a1" style="display:inline-block">ABC</p><br>
+     <input id="a1" name="ans" type="radio" value="A2"><p id="a2" style="display:inline-block">XYZ</p> <br>
+     <input id="a1" name="ans" type="radio" value="A3"><p id="a3" style="display:inline-block">DEF</p> <br>
+     <input id="a1" name="ans" type="radio" value="A4"><p id="a4" style="display:inline-block">GHI</p> <br>
+     <input type="button" onclick="getSelectedValue();" value="Get Selected Value">
+    </body>
+    <script>
+        var question = ["Who is PM of India?","Q2","Q3","Q4","Q5"];
+        var answer = ["A1","A2","A3","A4","A5"];
+        count=0;
+        var radio_state = document.getElementById("a1");
+
+        var a1 = ["XTZ","ASD","FFD","FSW"]; //1st question option
+        var a2 = ["eefd","ASD","FFD","FSW"]; //2nd question option
+        var a3 = ["gbgZ","ASD","FFD","FSW"]; //3rd question option
+        var a4 = ["fseZ","ASD","FFD","FSW"]; //4th question option
+        var a5 = ["dfZ","ASD","FFD","FSW"]; //5th question option
+                var i=1;
+        function getSelectedValue() {
+            if(i==question.length){
+                i=0;
+            }
+            console.log(question[i])
+            document.getElementById("ques").innerHTML=question[i];
+            if(document.getElementById("ques").innerHTML==question[i]){
+                var j=0;
+            document.getElementById("a1").innerHTML=a1[j];
+            document.getElementById("a2").innerHTML=a1[j+1];
+            document.getElementById("a3").innerHTML=a1[j+2];
+            document.getElementById("a4").innerHTML=a1[j+3];
+            }
+            else if(document.getElementById("ques").innerHTML==question[i]){
+                var j=0;
+            document.getElementById("a1").innerHTML=a2[j];
+            document.getElementById("a2").innerHTML=a2[j+1];
+            document.getElementById("a3").innerHTML=a2[j+2];
+            document.getElementById("a4").innerHTML=a2[j+3];
+            }
+            else if(document.getElementById("ques").innerHTML==question[i]){
+                var j=0;
+            document.getElementById("a1").innerHTML=a3[j];
+            document.getElementById("a2").innerHTML=a3[j+1];
+            document.getElementById("a3").innerHTML=a3[j+2];
+            document.getElementById("a4").innerHTML=a3[j+3];
+            }
+            else if(document.getElementById("ques").innerHTML==question[i]){
+                var j=0;
+            document.getElementById("a1").innerHTML=a4[j];
+            document.getElementById("a2").innerHTML=a4[j+1];
+            document.getElementById("a3").innerHTML=a4[j+2];
+            document.getElementById("a4").innerHTML=a4[j+3];
+            }
+            else if(document.getElementById("ques").innerHTML==question[i]){
+                var j=0;
+            document.getElementById("a1").innerHTML=a5[j];
+            document.getElementById("a2").innerHTML=a5[j+1];
+            document.getElementById("a3").innerHTML=a5[j+2];
+            document.getElementById("a4").innerHTML=a5[j+3];
+            }
+            var selectedValue = document.querySelector('input[name="ans"]:checked').value;
+             console.log(selectedValue);
+            if(selectedValue==answer[i]){
+                count++;
+                radio_state.checked=false;
+                console.log("Correct answer");
+                console.log("Seected Value: " + selectedValue);
+            }
+            else{
+                radio_state.checked=false;
+               console.log("Wrong answer");
+            }
+            i++;
+
+        }
+    </script>
+</html>
