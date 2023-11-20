@@ -1,0 +1,25 @@
+<!--Create a slideshow with the group of three images, also simulate next and 
+previous transition between slides in your Java Script.-->
+
+<html>
+    <body>
+    <button onclick="chg_img(-1);">Previous</button>
+    <img src="dog.jpg" id="img">
+    <button onclick="chg_img(1);">Next</button>
+    </body>
+    <script>
+     var images = ["dog.jpg","download.jpg","cat.jpg","car.jpg"];
+     var i=0;
+     
+   function chg_img(incre){
+    i=i+incre;
+    if(i>=images.length){
+        i=0;
+    }
+    if(i<0){
+        i=images.length-1;
+    }
+     document.getElementById("img").src=images[i];
+   }
+    </script>
+</html>

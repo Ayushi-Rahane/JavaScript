@@ -1,0 +1,27 @@
+<html>
+    <script>
+        let r=6;
+     for(let i=1;i<=r;i++){
+            for(let s =r-i;s>=0;s--){
+                document.write("&nbsp");
+            }
+            for(let p=1;p<=i;p++){
+                document.write("* ");
+            }
+            document.write("<br>");
+
+        }
+        for(let i=1;i<r;i++){
+           for(let s=0;s<=i;s++){
+               document.write("&nbsp");
+           }
+           for(let p=r-i;p>0;p--){
+              document.write("* ");
+           }
+            
+           document.write("<br>");
+           
+
+        }
+     </script>
+     </html>
