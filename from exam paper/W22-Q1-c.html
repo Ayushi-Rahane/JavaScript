@@ -1,0 +1,30 @@
+<!--Write a simple calculator program using switch case in JavaScript. -->
+
+<html>
+    <script>
+        do{
+      var num1 = parseInt(prompt("Enter First number: "));
+      var num2 = parseInt(prompt("Enter Second number: "));
+      var n;
+      var c = prompt("Enter Operation +,-,*,/");
+      
+      switch(c){
+        case '+':
+            alert("Sum: "+(num1+num2));
+            break;
+        case '-':
+            alert("Differ: "+(num1-num2));
+            break;
+        case '*':
+            alert("Product: "+(num1*num2));
+            break;    
+        case '/':
+            alert("Quotient: "+(num1/num2));
+            break;
+     
+      }
+           n=prompt("Press Y to exit: \nTo continue press any key except Y: ")
+
+    }while(n!=='Y' || n!=='y');
+    </script>    
+</html>
