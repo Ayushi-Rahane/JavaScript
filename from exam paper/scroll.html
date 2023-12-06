@@ -1,0 +1,28 @@
+<!--Write a JS program that creates a scrolling text on the status line of window-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrolling Status Text</title>
+  </head>
+  <body>
+    <script>
+      function startScrollingText() {
+        var text = 'This is scrolling text. ';
+        var speed = 100; // Adjust the speed (milliseconds) as needed
+        var index = 0;
+
+        function scrollText() {
+          window.status = text.substring(index) + text.substring(0, index);
+          index = (index + 1) % text.length;
+          setTimeout(scrollText, speed);
+        }
+
+        scrollText();
+      }
+
+      // Call the function to start scrolling when the page loads
+      window.onload = startScrollingText;
+    </script>
+  </body>
+</html>

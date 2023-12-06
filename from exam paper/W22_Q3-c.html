@@ -1,0 +1,24 @@
+<!--Write a JavaScript function to merge two array & removes all duplicate 
+values-->
+
+<html>
+    <script>
+        function arr(){
+            var  a1 = [1,2,4,4,6,3];
+            var a2 = [2,3,5,7,4,2];
+            
+            var new_A = a1.concat(a2);
+            document.write("Merge Array: "+new_A)
+            for(let i=0;i<new_A.length;i++){
+                for(let j=i+1;j<new_A.length;j++){
+                    if(new_A[i]==new_A[j]){
+                        new_A.splice(j,1);
+                        j--;
+                    }
+                }
+            }
+            document.write("<br>Update Array: "+new_A)
+        }
+        arr();
+    </script>
+</html>

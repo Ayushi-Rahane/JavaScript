@@ -5,3 +5,23 @@ Amit          70
 Sumit         78
 Abhishek      71-->
 
+<html>
+<script>
+    var stud = [["Amit",70],["Sumit",78],["Abhishek",71]];
+    var stud_m=[];
+    var total=0;
+    for(let i=0;i<stud.length;i++){
+        stud_m[i]=stud[i][1];
+    }
+    stud_m=stud_m.sort()
+    for(let i=0;i<stud.length;i++){
+        for(let j=0;j<stud.length;j++){
+        if(stud_m[i]==stud[j][1]){
+           document.write(stud[j]+"<br>");
+        }
+    }
+    total+=stud_m[i];
+    }
+      document.write("Average: "+(total/stud_m.length));
+</script>
+</html>

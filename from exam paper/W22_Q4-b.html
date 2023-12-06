@@ -1,0 +1,25 @@
+<!--Write a JavaScript program that will create pull-down menu with three 
+options. Once the user will select the one of the options then user will redirected 
+to that website.-->
+
+<html>
+    <body>
+        <select id="sel" onchange="disp();">
+            <option  value="">Select option</option>
+            <option value="www.google.com">Google</option>
+            <option value="www.yahoo.com">Yahoo</option>
+            <option value="www.msbte.org">MSBTE</option>
+        </select>
+    </body>
+    <script>
+        function disp(){
+            var sel = document.getElementById("sel");
+            if(sel.value==""){
+                 alert("Kindly choose option");
+            }
+            else{
+                window.location.href=sel.value;
+            }
+        }
+    </script>
+</html>

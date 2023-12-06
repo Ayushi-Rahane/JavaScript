@@ -1,0 +1,19 @@
+<!-- Write a JavaScript function to count the number of vowels in a given string. -->
+
+<html>
+    <script>
+        function  vowel_count(str){
+            var count=0;
+            str=str.toLowerCase();
+            var a = str.split('');
+            for(let i=0;i<a.length;i++){
+                if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='u'||a[i]=='o'){
+                    count++;
+                }
+            }
+            return count;
+
+        }
+        document.write("Number of vowels in Hello is: "+vowel_count("hEllo"));
+    </script>
+</html>
