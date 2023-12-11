@@ -1,0 +1,26 @@
+<!--Write a javascript to create option list containing list of images and then 
+display images in new window as per selection. 
+-->
+
+<html>
+    <body>
+        <select id="sel" onchange="chnag(this);">
+            <option value="">Select img</option>
+            <option value="cat.jpg">img1</option>
+            <option value="dog.jpg">img2</option>
+
+        </select>
+    </body>
+    <script>
+        function chnag(obj){
+            if(obj.value!=""){
+            var newWin = window.open();
+            newWin.document.write("<img src="+obj.value+">");
+        }
+        else{
+            alert("Kindly select option");
+        }
+    }
+
+    </script>
+</html>

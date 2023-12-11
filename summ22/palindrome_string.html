@@ -1,0 +1,15 @@
+<!--Write a javascript to checks whether a passed string is palindrome or not. -->
+<html>
+<script>
+    var str = prompt("Enter String: ")
+    function palindrome_Str(str){
+        if(str==str.split('').reverse().join('')){
+            alert("It is")
+        }
+        else{
+            alert("It is not");
+        }
+    }
+    palindrome_Str(str);
+</script>
+</html>

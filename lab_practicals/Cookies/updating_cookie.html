@@ -1,0 +1,32 @@
+<!--html>
+    <script>
+   document.cookie="cookiename=password123; path=www.google.com;";
+   document.write("<br>Reading cookie: "+document.cookie);
+   document.cookie="path=www.yahoo.com";
+   document.write("<br>Updated cookie: "+document.cookie);
+   document.cookie="cookiename=''; expires=Thu, 01 Jan 1998 00:00:00 UTC; path=/";
+   document.write("<br>Cookie is deleted: "+document.cookie);
+        </script>
+</html-->
+
+<html>
+  <script>
+    // Create a cookie
+    document.cookie = "cookiename=password123; path=/";
+
+    // Display the cookie
+    document.write("Reading cookie: " + document.cookie);
+
+    // Update the cookie path
+    document.cookie = "path=/www.yahoo.com";
+
+    // Display the updated cookie
+    document.write("<br>Updated cookie: " + document.cookie);
+
+    // Delete the cookie by setting its expiration date to the past
+    document.cookie = "cookiename=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+
+    // Display the deleted cookie
+    document.write("<br>Cookie is deleted: " + document.cookie);
+  </script>
+</html>

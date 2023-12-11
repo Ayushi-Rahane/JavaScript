@@ -1,0 +1,38 @@
+<!-- Write HTML script that will display dropdown list containing options such as 
+Red, Green, Blue and Yellow. Write a JavaScript program such that when the 
+user selects any options. It will change the background colour of webpage.-->
+<html>
+    <body>
+        <select onchange="chg_colr(this);">
+            <option value="">Select color</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+    </body>
+    <script>
+
+        function chg_colr(obj){
+            if(obj.value==""){
+                alert("Kindy select color");
+            }
+            else{
+                switch(obj.value){
+                    case 'Red':
+                        document.body.style.backgroundColor = 'red';
+                        break;
+                    case 'Green':
+                        document.body.style.backgroundColor = 'green';
+                        break;
+                    case 'Blue':
+                        document.body.style.backgroundColor = 'blue';
+                        break;    
+                    case 'Yellow':
+                        document.body.style.backgroundColor = 'yellow';
+                        break;
+                }
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,17 @@
+<!-- Construct regular expression for validating the phone number in following format 
+only :
+(nnn)-nnnn-nnnn OR nnn.nnnn.nnnn-->
+
+<html>
+    <script>
+        p = /^(\(\d{3}\)-\d{4}-\d{4}|\d{3}\.\d{4}\.\d{4})$/;
+  var no = parseInt(prompt("Enter no:"));
+  document.write(p.test(no));
+        if(p.test(no)){
+            document.write("True");
+        }
+        else{
+            document.write("False");
+        }
+    </script>
+</html>

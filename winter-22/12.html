@@ -1,0 +1,26 @@
+<!--Write a webpage that displays a form that contains an input for user name and 
+password. User is prompted to enter the input user name and password and password 
+becomes the value of the cookie. Write the JavaScript function for storing the cookies. 
+It gets executed when the password changes.-->
+<html>
+    <body>
+<label>
+    Enter username: 
+</label>
+<br> 
+<input type="text">
+<br>
+<br>
+<label>Enter Password: </label>
+<br>
+<input type="password" onchange="store_cookie(this);">
+    </body>
+    <script>
+   function store_cookie(obj){
+    document.cookie="Password="+obj.value+";";
+    alert("Stored cookie: "+document.cookie);
+       
+   }
+        </script>
+
+</html>

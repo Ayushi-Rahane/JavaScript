@@ -1,0 +1,72 @@
+<!--Write HTML script that will display following structure
+Write the JavaScript code for below operations: 
+(1) Name, Email & Pin Code should not be blank. 
+(2) Pin Code must contain 6 digits & it should not be accept any characters -->
+
+<html>
+    <style>
+        table,td,th{
+            border:solid 2px;
+            border-collapse:collapse;
+            padding:12px;
+        }
+    </style>    
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" id="email">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Pin code:
+                </td>
+                <td>
+                    <input type="text" id="code">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <button onclick="check();">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function check(){
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var code = document.getElementById("code");
+            if(name.value==""||email.value==""||code.value==""){
+                alert("kingly field all columns the value");
+            }
+            else{
+                p = /^\d{1}\d{5}$/;
+                if(!p.test(code.value)){
+                    alert("Kindly enter only 6 digits of pin code");   
+                }
+                else{
+                    alert("Successful")
+                }
+            }
+        }
+    </script>
+</html>

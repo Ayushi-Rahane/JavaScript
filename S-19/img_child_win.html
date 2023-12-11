@@ -1,0 +1,16 @@
+<!--Write a javascript to open a new window and the new window is having two 
+frames. One frame containing buthon as “click here !”, and after clicking this 
+button an image should open in the second frame of that child window. 
+-->
+
+<html>
+    <body>
+        <button onclick="show_img();">click here !</button>
+    </body>
+    <script>
+        function show_img(){
+            var newWin = window.open("",target="_blank");
+            newWin=document.write("<html><frameset cols='50%,50%'><frame src='frame1.html'><frame src='frame2.html' name='a'></frameset></html>")
+        }
+    </script>
+</html>

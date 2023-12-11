@@ -1,0 +1,55 @@
+<!--Write a Java script program which computes, the average marks of the 
+following students then, this average is used to determine the corresponding 
+grade.
+Student Name Marks
+Sumit 80
+Kalpesh 77
+Amit 88
+Tejas 93
+Abhishek 65
+The grades are computed as follows :
+Range Grade
+<60 E
+<70 D
+<80 C
+<90 B
+<100 A-->
+
+
+    <html>
+        <script>
+    var student = {
+      sumit:80,
+      Kalpesh:77,
+      Amit:88,
+      Tejas: 93,
+      Abhishek:65
+    };
+  var sum = 0;
+    for(let i in student){
+    sum = sum + student[i];
+    }
+    
+    avg = sum/Object.values(student).length;
+    document.write("Average: "+ avg);
+
+    switch(true){
+        case (avg<100 && avg >=90):
+        document.write("Grade: A");
+        break;
+
+        case (avg<90 && avg >=80):
+        document.write("Grade: B");
+        break;
+
+        case (avg<80 && avg >=70):
+        document.write("Grade: C");
+        break;
+
+        case (avg<70 && avg >=60):
+        document.write("Grade: D");
+        break;
+    }
+
+          </script>  
+    </html>

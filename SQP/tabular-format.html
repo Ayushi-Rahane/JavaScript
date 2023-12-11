@@ -1,0 +1,51 @@
+<!--Write a javascript program to design HTML page with books information in 
+tabular format, use rollovers to display the discount information. -->
+
+<html>
+<style>
+    table,td,th{
+        padding:12px;
+        border:solid 2px;
+        border-collapse:collapse;
+    }
+    
+</style>
+<body onload="hide();">
+    <h1>Hover over book name to display its discount</h1>
+    <table>
+        <th>Book name</th>
+        <th>Book price</th>
+        <th>Book vertical</th>
+        <tr>
+            <td onmouseover="display();" onmouseout="hide();">ABC</td>
+            <td>$12</td>
+            <td id="d1" >12%</td>
+        </tr>
+        <tr>
+            <td onmouseover="display();" onmouseout="hide();">GFD</td>
+            <td>$42</td>
+            <td id="d2" >11%</td>
+        </tr>
+        <tr>
+            <td onmouseover="display();" onmouseout="hide();">XYT</td>
+            <td>$22</td>
+            <td id="d3" >10%</td>
+        </tr>
+    </table>
+</body>
+<script>
+    var d1 = document.getElementById('d1');
+    var d2 = document.getElementById('d2');
+    var d3 = document.getElementById('d3');
+    function hide(){
+        d1.style.visibility='hidden';
+       d2.style.visibility='hidden';
+       d3.style.visibility='hidden';
+    }
+    function display(){
+        d1.style.visibility='visible';
+       d2.style.visibility='visible';
+       d3.style.visibility='visible';
+    }
+</script>
+</html>

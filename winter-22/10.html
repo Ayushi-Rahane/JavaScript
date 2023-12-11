@@ -1,0 +1,26 @@
+<!--link banner advertisement to URL-->
+<html>
+    <body onload="chg_img();">
+        <a href="google.com" id="link">
+            <img src="car.jpg" id="i">
+        </a>
+    </body>
+    <script>
+    var imgs = ['car.jpg','cat.jpg','dog.jpg'];
+    var links = ['google.com','yahoo.com','msbte.org'];
+    var i=0;
+
+function chg_img(){
+      i++;
+      if(i>=imgs.length){
+        i=0;
+      }
+      else if(i<0){
+        i=imgs.length-1;
+      }
+      document.getElementById("i").src=imgs[i];
+      document.getElementById('link').href=links[i];
+      setInterval(chg_img,5000);
+    }
+    </script>
+</html>

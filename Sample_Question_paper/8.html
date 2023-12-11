@@ -1,0 +1,20 @@
+<!--Write a JavaScript program to check number is Armstrong or not.-->
+
+<html>
+    <script>
+        var n = 153;
+        var sum=0,r,temp;
+        temp=n;
+        while(n>0){
+            r = n%10;
+            sum = sum+(r*r*r);
+            n=Math.floor(n/10);
+        }
+     if(sum==temp){
+        alert("Armstrong");
+     }
+     else{
+        alert("Not")
+     }
+    </script>
+</html>

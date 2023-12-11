@@ -11,21 +11,23 @@ radio button option list should present only vegetable names to the user.-->
         </select>
     </body>
     <script>
+           var sel = document.getElementById("sel");
    function action1(){
-    var sel = document.getElementById("sel");
+ 
     var fruits = ["Apple","Banana","grapes","Jamun"];
+    sel.innerHTML = "";
       for(i=0;i<fruits.length;i++){
            op = new Option(fruits[i],fruits[i]);
            
            sel.add(op,undefined);
        }
-       document.getElementById("sel").value="";
    }
    function action2(){
     var vegetable = ["Tomato","Potato","Spinach"];
+    sel.innerHTML = "";
     for(i=0;i<vegetable.length;i++){
         op = new Option(vegetable[i],vegetable[i]);
-        document.getElementById("sel").add(op,undefined);
+       sel.add(op,undefined);
     }
    }
     </script>

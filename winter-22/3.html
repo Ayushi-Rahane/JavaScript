@@ -1,0 +1,22 @@
+<!--Write a JavaScript program that will display current date in DD/MM/YYYY format.-->
+
+<html>
+    <script>
+        var d = new Date();
+        var c_date = d.getDate();
+        var c_month = d.getMonth()-1;
+        var c_year = d.getFullYear();
+        document.write("Current date: "+c_date+"/"+c_month+"/"+c_year);
+
+        var  a= [1,4,2,4,6,4,2,14,];
+        for(let i=0;i<a.length;i++){
+            for(let j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    delete a[j];
+                    j--;
+                }
+            }
+        }
+        console.log(a);
+    </script>
+</html>

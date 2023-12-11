@@ -1,0 +1,18 @@
+<!--Write a Java script to create person object with properties firstname, 
+lastname, age, eyecolor, delete eyecolor property and display remaining 
+properties of person object.-->
+
+<html>
+    <script>
+        var person = {
+            firstname:'Ram',
+            lastname:'raj',
+            age:32,
+            eyecolor:'brown'
+        }
+        delete person['eyecolor'];
+        for(let i in person){
+            document.write(i+":"+person[i]+"<br>");
+        }
+    </script>
+</html>

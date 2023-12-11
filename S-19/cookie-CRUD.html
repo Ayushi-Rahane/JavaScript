@@ -1,0 +1,48 @@
+<!--Write a javascript program to create read, update and delete cookies. 
+-->
+
+<html>
+    <body>
+        <button onclick="create_c();">Create</button>
+        <br>
+        <br>
+        
+        <button onclick="read_c();">Read</button>
+        <br>
+        <br>
+        
+        <button onclick="update_c();">Update</button>
+        <br>
+        <br>
+        
+        <button onclick="delete_c();">Delete</button>
+        <br>
+        <br>
+    </body>
+    <script>
+          var cookie_name ;
+          var cookie_value;
+
+        function create_c(n,v){
+            cookie_name= prompt("Enter cookie name: ");
+        cookie_value = prompt("Enter cookie value: ");
+            document.cookie=cookie_name+"="+cookie_value+"; expires=Thu, 12 Jan 2024 00:00:00 UTC; path=/;";
+        }
+
+        function read_c(){
+            alert("Reading cookie:"+document.cookie);
+        }
+        function update_c(){
+            cookie_name = prompt("Enter cookie name you want to update: ");
+            cookie_value = prompt("Enter cookie value: ");
+            document.cookie=cookie_name+"="+cookie_value+"; expires=Thu, 12 Jan 2024 00:00:00 UTC; path=/;";
+            alert("Cookie updated");
+        }
+        function delete_c(){
+            var cookie_name = prompt("Enter cookie name to delete: ");
+            document.cookie = cookie_name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Cookie deleted");
+        }
+
+    </script>
+</html>

@@ -1,0 +1,25 @@
+<!--Write a JavaScript function to merge two array & removes all duplicate 
+values-->
+
+<html>
+    <script>
+        function dup(a1,a2){
+            document.write("A1: "+a1+"<br>A2: "+a2);
+            var a3 = a1.concat(a2);
+           document.write("<br>Merged Array: "+a3);
+            for(let i=0;i<a3.length;i++){
+                for(let j=i+1;j<a3.length;j++){
+                     if(a3[i]==a3[j]){
+                        a3.splice(j,1);
+                        j--;
+                     }
+                }
+            }
+            document.write("Updated array:"+a3);
+        }
+        var a1 = [1,2,4,6,73];
+        var a2 = [3,2,4,6,1,32];
+
+        dup(a1,a2);
+    </script>
+</html>
