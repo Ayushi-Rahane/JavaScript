@@ -18,6 +18,31 @@
                 return "<br>Welcome to Function" + name;
              }
              document.write(msg3("ayushi"));
+
+             //function with object as argument
+
+             function hello(person){
+                 for(let i in person){
+                    document.write(i+"="+person[i])
+                 }
+             }
+             var person = {
+                name:"Ayushi",
+                roll_no:12
+             };
+
+             hello(person);
+
+
+             //Function with function as arguement
+             function add(a,b){
+                return a+b;
+             }
+
+             function sum(add,a,b){
+                return add(a,b);
+             }
+             document.write("<br>"+sum(add,1,2));
         </script>
     </body>
 </html>

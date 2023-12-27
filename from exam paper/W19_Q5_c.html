@@ -1,0 +1,42 @@
+<!--Write a java script that displays textboxes for accepting name & email ID & 
+a submit button. Write java script code such that when the user clicks on 
+submit button 
+(1) Name Validation 
+(2) Email ID Validation.-->
+
+<html>
+    <body>
+        <label>Enter username: </label>
+        <input type="text" id="user">
+        <br>
+        <br>
+        <label>Enter Email ID: </label>
+        <input type="email" id="email">
+        <br>
+        <br>
+        <button onclick="show_();">Submit</button>
+    </body>
+    <script>
+        function show_(){
+            var name = document.getElementById("user");
+            var email = document.getElementById("email");
+            //Name Validation
+            var p1 =/^\S+\w{8,12}/;
+            if(p1.test(name.value)){
+                alert("Name is valid")
+            }
+            else{
+                alert("invalid name");
+            }
+
+            //Email id Validation
+            var p2 = /^\S+@\S+\.\S+$/;
+            if(p2.test(email.value)){
+                alert("Email id valid");
+            }
+            else{
+                alert("Invalid Email");
+            }
+        }
+    </script>
+</html>
