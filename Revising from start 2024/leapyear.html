@@ -1,0 +1,71 @@
+<script>
+    let yr =  Number(prompt("Enter the year: "));
+
+    /*
+     yr %4 == 0   True - it is leap yr
+     yr % 100 == 0 True- it is not leap yr
+     yr % 400 == 0  True - it is leap yr
+    */
+
+   //nested if-else
+ /*  if(yr%4==0){
+       if(yr%100==0){
+          if(yr%400==0){
+            console.log("It is leap yr")
+          }
+          else{
+            console.log("It is not leap yr")
+          }
+       }
+       else{
+        console.log("It is leap yr")
+       }
+   }
+   else{
+    console.log("it is not leap yr");
+   }
+*/
+
+
+/*
+
+//AND operator &&
+    if(false && false){
+        console.log("Executing IF block")
+    }
+    else{
+        console.log("Executing ELSE block")
+    }
+
+    //
+
+
+//OR operator ||
+
+if(false || false){
+        console.log("Executing IF block")
+    }
+    else{
+        console.log("Executing ELSE block")
+    }
+
+// NOT !
+
+console.log(!true)  //
+*/
+
+//Leap yr
+
+ /*
+     yr %4 == 0   True - it is leap yr
+     yr % 400 == 0  True - it is leap yr
+     yr % 100 == 0 True- it is not leap yr
+    */
+if((yr%4==0 && yr%400==0) || yr%100==0){
+    console.log("it is leap yr")
+}
+else{
+    console.log("it is not leap yr");
+}
+</script>
+
