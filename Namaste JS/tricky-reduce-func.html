@@ -1,0 +1,18 @@
+<script>
+    
+ //printing the name of users whose age is below 50
+ const users = [
+        {first:"ayushi", last:"rahane",age:12},
+        {first:"arav", last:"rahane", age:23},
+        {first:"diya", last:"rahane", age:33},
+        {first:"palak", last:"rahane", age:73},
+    ]
+
+    let under_age_30 = users.reduce(function(acc,cur){
+         if(cur.age<30){
+            acc.push(cur.first+" "+cur.last);
+         }
+         return acc;
+    },[]);
+    console.log(under_age_30)
+</script>
